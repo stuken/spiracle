@@ -24,11 +24,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
           <li class="active"><a href="index.jsp">Overview</a></li>
-          <li><a href="file.jsp">File</a></li>
-          <li><a href="network.jsp">Network</a></li>
           <li><a href="sql.jsp">SQL</a></li>
-          <li><a href="xss.jsp">XSS</a></li>
-          <li><a href="misc.jsp">Misc</a></li>
           </ul>
         </div>
       </div>

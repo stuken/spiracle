@@ -49,11 +49,7 @@ public class TagUtil {
 		out.println("<div class=\"navbar-collapse collapse\">");
 		out.println("<ul class=\"nav navbar-nav\">");
 		out.println("<li><a href=\"index.jsp\">Overview</a></li>");
-		out.println("<li><a href=\"file.jsp\">File</a></li>");
-		out.println("<li><a href=\"network.jsp\">Network</a></li>");
 		out.println("<li class=\"active\"><a href=\"sql.jsp\">SQL</a></li>");
-        out.println("<li><a href=\"xss.jsp\">XSS</a></li>");
-        out.println("<li><a href=\"misc.jsp\">Misc</a></li>");
 		out.println("</ul>");
 		out.println("</div>");
 		out.println("</div>");

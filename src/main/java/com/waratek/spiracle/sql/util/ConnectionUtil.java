@@ -22,8 +22,6 @@ import javax.servlet.ServletContext;
 import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.waratek.spiracle.sql.servlet.util.ParameterNullFix;
@@ -44,10 +42,6 @@ public class ConnectionUtil {
         } else if (connectionType.equals(Constants.C3P0_MSSQL)) {
             ComboPooledDataSource ds = (ComboPooledDataSource) application.getAttribute(Constants.MSSQL_CONNECTION_POOL);
             con = ds.getConnection();
-        } else if (connectionType.equals("spring")) {
-            FileSystemXmlApplicationContext context = (FileSystemXmlApplicationContext) application.getAttribute("springContext");
-            DriverManagerDataSource dmds = (DriverManagerDataSource) context.getBean("dataSource");
-            con = dmds.getConnection();
         } else if (connectionType.equals("jndi")) {
             DataSource ds = (DataSource) application.getAttribute("jndiConnectionPool");
             con = ds.getConnection();
